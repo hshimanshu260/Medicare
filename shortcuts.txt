@@ -1,0 +1,2 @@
+edit theme github : ctrl+K+T
+indentation correction : shift+alt+F
