@@ -417,7 +417,7 @@ export async function toggleAvailability(req, res) {
 }
 
 //to login the Doctor
-export async function docotrLogin(req, res) {
+export async function doctorLogin(req, res) {
   try {
     const { email, password } = req.body || {};
     if (!email || !password)
