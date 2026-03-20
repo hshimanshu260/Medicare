@@ -538,7 +538,7 @@ export const updateAppointment = async (req, res) => {
 };
 
 //to cancleAppointment
-export const cancleAppointment = async (req, res) => {
+export const cancelServiceAppointment = async (req, res) => {
   try {
     const { id } = req.params;
     const appt = await Appointment.findById(id);
@@ -649,7 +649,7 @@ export default{
     createAppointment,
     confirmPayment,
     updateAppointment,
-    cancleAppointment,
+    cancelServiceAppointment,
     getStats,
     getAppointmentsByDoctor,
     getRegisteredUserCount
