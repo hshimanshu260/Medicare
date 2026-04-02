@@ -1,4 +1,4 @@
-
+/*
 import dns from "dns";
 import mongoose from "mongoose";
 
@@ -14,3 +14,17 @@ export const connectDB = async () => {
     console.log("DB ERROR:", error);
   }
 };
+*/
+import mongoose from "mongoose";
+
+const connectDB = async () => {
+  try {
+    await mongoose.connect(process.env.MONGODB_URI);
+    console.log("DB CONNECTED");
+  } catch (error) {
+    console.log("DB ERROR:", error);
+    process.exit(1);
+  }
+};
+
+export default connectDB;
